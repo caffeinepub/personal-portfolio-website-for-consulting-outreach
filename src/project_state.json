@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Personal portfolio website to share work and attract consulting clients.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal geometric hero background illustration with warm neutral palette (hero-bg.dim_1600x900.png)\n- Simple monogram-style personal logo mark, high-contrast on transparent background (logo-mark.dim_512x512.png)\n- Subtle abstract section divider pattern, transparent background (section-divider.dim_2000x300.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-personal-portfolio-website-with-clear-navigation-and-the-following-sections-hero-intro-name-short-positioning-statement-about-services-consulting-offerings-work-projects-portfolio-items-testimonials-optional-but-supported-and-contact-email-social-links",
+      "title": "Create a responsive personal portfolio website with clear navigation and the following sections: Hero/Intro (name, short positioning statement), About, Services (consulting offerings), Work/Projects (portfolio items), Testimonials (optional but supported), and Contact (email + social links).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-projects-work-section-that-displays-a-list-of-portfolio-items-with-title-short-description-role-stack-freeform-text-and-outbound-links-e-g-live-demo-and-or-repository",
+      "title": "Implement a Projects/Work section that displays a list of portfolio items with: title, short description, role/stack (freeform text), and outbound links (e.g., live demo and/or repository).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-suitable-for-consulting-leads-that-includes-a-prominent-email-link-mailto-optional-calendaring-link-placeholder-and-social-links-placeholders-e-g-linkedin-x-twitter-github",
+      "title": "Add a Contact section suitable for consulting leads that includes: a prominent email link (mailto:), optional calendaring link placeholder, and social links placeholders (e.g., LinkedIn, X/Twitter, GitHub).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-establish-a-coherent-visual-theme-colors-typography-spacing-component-style-appropriate-for-a-consulting-portfolio-and-apply-it-consistently-across-all-sections-avoid-blue-purple-as-the-primary-palette",
+      "title": "Establish a coherent visual theme (colors, typography, spacing, component style) appropriate for a consulting portfolio and apply it consistently across all sections. Avoid blue & purple as the primary palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-shareability-metadata-for-the-portfolio-page-title-description-and-social-preview-defaults-open-graph-twitter-card-using-placeholder-values-that-the-user-can-edit",
+      "title": "Add basic SEO and shareability metadata for the portfolio: page title, description, and social preview defaults (Open Graph/Twitter card) using placeholder values that the user can edit.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-the-required-static-images-in-the-app-and-render-them-from-frontend-static-assets-do-not-serve-images-through-the-backend",
+      "title": "Generate and include the required static images in the app and render them from frontend static assets (do not serve images through the backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a personal portfolio website for sharing work with people for consulting purposes",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Personal portfolio website for consulting outreach",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

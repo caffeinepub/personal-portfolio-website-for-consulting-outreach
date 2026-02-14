@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes all portfolio sections (Hero, About, Services, Work, Testimonials, Contact) with section dividers and a footer containing social links and attribution.",
+  "frontend/src/components/PortfolioNav.tsx": "Responsive navigation header with smooth scroll-to-section functionality, mobile menu toggle, and scroll-based styling changes.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section featuring background image, logo mark, headline with positioning statement, and dual CTAs for contact and work sections.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with bio narrative, four highlight cards showcasing key strengths, and a competencies grid covering strategy, operations, and technology.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying six consulting service offerings in a responsive grid, each with icon, description, and typical engagement bullets.",
+  "frontend/src/components/sections/WorkSection.tsx": "Work/projects section that renders portfolio items from the projects data source using ProjectCard components in a responsive grid.",
+  "frontend/src/components/sections/TestimonialsSection.tsx": "Testimonials section displaying four client testimonials in card format with quotes, author details, and company information.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with email and optional calendaring CTAs, plus social media links configured from the contact config file.",
+  "frontend/src/components/ProjectCard.tsx": "Reusable project card component that displays project title, description, role/stack, and conditionally renders demo and repository links.",
+  "frontend/src/components/SafeExternalLink.tsx": "Helper component for external links that consistently applies target=\"_blank\" and rel=\"noopener noreferrer\" for security.",
+  "frontend/src/data/projects.ts": "Typed data source exporting an array of four portfolio projects with titles, descriptions, role/stack details, and optional outbound links.",
+  "frontend/src/config/contact.ts": "Configuration object for contact details including email, optional calendaring URL, and social media links (LinkedIn, GitHub).",
+  "frontend/src/index.css": "Global styles with warm terracotta/amber OKLCH color palette, Playfair Display + Inter typography, and custom animation utilities for fade-in effects.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom font families (Playfair Display, Inter) and maintaining the OKLCH color system.",
+  "frontend/index.html": "HTML entry point with comprehensive SEO metadata including title, description, Open Graph tags, and Twitter card tags for social sharing.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file reserved for React Query hooks; currently empty as portfolio is frontend-only with no backend data fetching."
+}

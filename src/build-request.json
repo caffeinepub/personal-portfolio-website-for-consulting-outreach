@@ -1,0 +1,133 @@
+{
+  "kind": "build_request",
+  "title": "Personal portfolio website for consulting outreach",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive personal portfolio website with clear navigation and the following sections: Hero/Intro (name, short positioning statement), About, Services (consulting offerings), Work/Projects (portfolio items), Testimonials (optional but supported), and Contact (email + social links).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I want to create a personal portfolio website so I can share them with people for consulting purposes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders all listed sections with sensible default placeholder content in English.",
+        "Navigation allows jumping to each section (or routes to each section) on both desktop and mobile.",
+        "Layout is responsive and usable on common viewport sizes (mobile, tablet, desktop)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a Projects/Work section that displays a list of portfolio items with: title, short description, role/stack (freeform text), and outbound links (e.g., live demo and/or repository).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "personal portfolio website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Projects render from a single editable data source in the frontend (e.g., a typed array/object) without requiring backend changes.",
+        "Each project card supports 0–2 outbound links and handles missing links gracefully.",
+        "Project cards have consistent spacing, typography, and hover/focus states."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a Contact section suitable for consulting leads that includes: a prominent email link (mailto:), optional calendaring link placeholder, and social links placeholders (e.g., LinkedIn, X/Twitter, GitHub).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "share them with people for consulting purposes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact section includes accessible link labels and opens external links safely (new tab with appropriate rel attributes).",
+        "Email link uses mailto: and is clearly visible on mobile.",
+        "All links can be configured via a single frontend configuration object."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Establish a coherent visual theme (colors, typography, spacing, component style) appropriate for a consulting portfolio and apply it consistently across all sections. Avoid blue & purple as the primary palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "personal portfolio website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single theme is evident across headings, body text, buttons/links, and section backgrounds.",
+        "Primary palette does not use blue/purple as the main brand colors.",
+        "UI maintains good contrast and readable typography."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add basic SEO and shareability metadata for the portfolio: page title, description, and social preview defaults (Open Graph/Twitter card) using placeholder values that the user can edit.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "share them with people"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Document has a meaningful title and meta description (English placeholders are acceptable).",
+        "Open Graph and Twitter card meta tags are present with placeholder values.",
+        "Metadata values are easy to find and edit in the frontend codebase."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Generate and include the required static images in the app and render them from frontend static assets (do not serve images through the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "personal portfolio website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "Images render correctly on the landing page on mobile and desktop.",
+        "No backend endpoints are introduced for serving images."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (no additional backend services).",
+    "Do not edit files under frontend/src/components/ui or other immutablePaths; compose those components instead.",
+    "Use English for any user-facing text."
+  ],
+  "nonGoals": [
+    "Implementing third-party authentication (only Internet Identity is supported, and it is not required for this portfolio).",
+    "Adding a real-time chat or messaging system.",
+    "Integrating external databases, CMSs, or third-party email providers."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal geometric hero background illustration with warm neutral palette (hero-bg.dim_1600x900.png)",
+      "Simple monogram-style personal logo mark, high-contrast on transparent background (logo-mark.dim_512x512.png)",
+      "Subtle abstract section divider pattern, transparent background (section-divider.dim_2000x300.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Responsive consulting portfolio landing page",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page portfolio with section navigation (Hero, About, Services, Work/Projects, Testimonials, Contact).",
+      "acceptanceCriteria": [
+        "Landing page renders all listed sections with sensible default placeholder content in English.",
+        "Navigation allows jumping to each section (or routes to each section) on both desktop and mobile.",
+        "Layout is responsive and usable on common viewport sizes (mobile, tablet, desktop)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main single-page layout with all required sections (Hero/Intro, About, Services, Work/Projects, Testimonials, Contact) and anchor targets for navigation; compose UI using shadcn/ui components where helpful (e.g., Card, Button, Separator) for consistent structure. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/PortfolioNav.tsx",
+          "operation": "create",
+          "description": "Implement a responsive navigation header (desktop links + mobile menu) that scrolls/jumps to each section anchor; compose UI using shadcn/ui components (e.g., Button + dropdown/sheet-style primitives if available) without editing files under frontend/src/components/ui. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Add the Hero/Intro section with name + positioning statement and primary call-to-action link(s) that jump to Contact/Work; keep text in English and responsive. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Add an About section with placeholder bio, credibility bullets, and compact layout suitable for mobile/desktop. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Add a Services section listing consulting offerings with brief descriptions and optional 'typical engagements' bullets; use consistent card/list styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Add a Testimonials section that is optional but supported (render placeholder testimonials and allow easily removing/empty state); use a consistent quote/card style. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Add a Contact section container and CTA layout; actual link configuration is handled by REQ-3. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app renders the new App component and that global styling import remains in place; keep the existing app providers intact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a Projects/Work section rendering portfolio items from a single typed frontend data source with graceful optional outbound links.",
+      "acceptanceCriteria": [
+        "Projects render from a single editable data source in the frontend (e.g., a typed array/object) without requiring backend changes.",
+        "Each project card supports 0–2 outbound links and handles missing links gracefully.",
+        "Project cards have consistent spacing, typography, and hover/focus states."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/projects.ts",
+          "operation": "create",
+          "description": "Create a single typed, editable frontend data source exporting an array of portfolio items (title, description, role/stack, and up to 0–2 outbound links) used by the Projects/Work UI."
+        },
+        {
+          "path": "frontend/src/components/ProjectCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable project card that renders title/description/role-stack and conditionally renders 0–2 outbound links with consistent hover/focus states; compose styling using shadcn/ui components such as Card and Button where available. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/WorkSection.tsx",
+          "operation": "create",
+          "description": "Create the Work/Projects section that imports the single projects data source and maps it into ProjectCard components, including responsive grid/list behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Work/Projects section into the landing page flow in the correct order and ensure it has a stable anchor id for navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a consulting-focused Contact section with configurable email, optional calendaring placeholder, and social links with safe external-link behavior.",
+      "acceptanceCriteria": [
+        "Contact section includes accessible link labels and opens external links safely (new tab with appropriate rel attributes).",
+        "Email link uses mailto: and is clearly visible on mobile.",
+        "All links can be configured via a single frontend configuration object."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/config/contact.ts",
+          "operation": "create",
+          "description": "Create a single editable configuration object for contact details (email, optional calendaring URL placeholder, and social links like LinkedIn/X/GitHub) that the Contact section consumes."
+        },
+        {
+          "path": "frontend/src/components/SafeExternalLink.tsx",
+          "operation": "create",
+          "description": "Add a small helper component for external links that consistently applies target=_blank and appropriate rel attributes, plus accessible labeling; optionally compose with shadcn/ui link/button patterns if present. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Render the mailto: link prominently, plus optional calendaring placeholder and social links using the single contact config; use SafeExternalLink for external URLs and ensure mobile-first readability. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Define and apply a consistent consulting-appropriate theme (no blue/purple primary palette) across typography, spacing, and component styling.",
+      "acceptanceCriteria": [
+        "A single theme is evident across headings, body text, buttons/links, and section backgrounds.",
+        "Primary palette does not use blue/purple as the main brand colors.",
+        "UI maintains good contrast and readable typography."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles and CSS variables used by Tailwind/shadcn theming (background/foreground/primary/etc.) with a warm neutral primary palette (avoid blue/purple as primary), set base typography defaults, and ensure accessible contrast. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions as needed to support the chosen warm neutral palette, typography scale, and spacing consistency used across sections (keeping the existing CSS-variable-driven color system)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply consistent section spacing, backgrounds, and typography classes across all sections to reflect a unified theme; ensure interactive elements have clear hover/focus styles. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add basic SEO and share metadata (title, description, Open Graph, Twitter card) with easy-to-edit placeholder values.",
+      "acceptanceCriteria": [
+        "Document has a meaningful title and meta description (English placeholders are acceptable).",
+        "Open Graph and Twitter card meta tags are present with placeholder values.",
+        "Metadata values are easy to find and edit in the frontend codebase."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add/adjust SEO metadata: title, meta description, Open Graph tags, and Twitter card tags using English placeholder values; keep values easy to locate and edit in this file."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Include required generated static images under frontend/public/assets/generated and render them from frontend static assets.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "Images render correctly on the landing page on mobile and desktop.",
+        "No backend endpoints are introduced for serving images."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset at frontend/public/assets/generated/hero-bg.dim_1600x900.png for use as the hero background illustration."
+        },
+        {
+          "path": "frontend/public/assets/generated/logo-mark.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated image asset at frontend/public/assets/generated/logo-mark.dim_512x512.png for use as the personal logo mark."
+        },
+        {
+          "path": "frontend/public/assets/generated/section-divider.dim_2000x300.png",
+          "operation": "create",
+          "description": "Add the generated image asset at frontend/public/assets/generated/section-divider.dim_2000x300.png for use as a subtle section divider pattern."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference and render frontend/public/assets/generated/hero-bg.dim_1600x900.png in the Hero section (as an image/background element) and frontend/public/assets/generated/logo-mark.dim_512x512.png as the logo mark with appropriate alt text and responsive behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reference and render frontend/public/assets/generated/section-divider.dim_2000x300.png between major sections (or as a repeated motif) while keeping the page responsive. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

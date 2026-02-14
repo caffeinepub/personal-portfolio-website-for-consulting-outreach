@@ -1,0 +1,63 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T18:37:58.074Z",
+  "summary": "Diff adds a full frontend portfolio layout with navigation and sections (Hero/About/Services/Work/Testimonials/Contact), themed styling, projects/contact config data sources, and safe external links. However, the required generated image filenames/paths do not match the BuildRequest, and additional Internet Identity/auth-related hooks were introduced despite not being required.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Generate and include the required static images under frontend/public/assets/generated with the exact required filenames and reference them from the UI (hero-bg.dim_1600x900.png, logo-mark.dim_512x512.png, section-divider.dim_2000x300.png).",
+      "reason": "UI references /assets/generated/hero-bg.png, /assets/generated/logo-mark.png, and /assets/generated/section-divider.png (different names/extensions than specified). The diff summary does not provide evidence that the exact required image files exist under frontend/public/assets/generated.",
+      "evidence": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/PortfolioNav.tsx",
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added Internet Identity authentication/provider and actor-creation hooks (useInternetIdentity/useActor) even though third-party auth is a non-goal and Internet Identity is explicitly 'not required for this portfolio'.",
+      "reason": "BuildRequest does not ask for authentication or identity management; adding these hooks and provider is extra scope.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Added footer attribution link to caffeine.ai with UTM parameters.",
+      "reason": "Not requested in the BuildRequest requirements or acceptance criteria; introduces additional outbound branding link.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/PortfolioNav.tsx",
+    "frontend/src/components/ProjectCard.tsx",
+    "frontend/src/components/SafeExternalLink.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ServicesSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/components/sections/WorkSection.tsx",
+    "frontend/src/config/contact.ts",
+    "frontend/src/data/projects.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

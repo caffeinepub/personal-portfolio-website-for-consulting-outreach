@@ -1,0 +1,128 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-personal-portfolio-website-with-clear-navigation-and-the-following-sections-hero-intro-name-short-positioning-statement-about-services-consulting-offerings-work-projects-portfolio-items-testimonials-optional-but-supported-and-contact-email-social-links",
+      "featureTitle": "Create a responsive personal portfolio website with clear navigation and the following sections: Hero/Intro (name, short positioning statement), About, Services (consulting offerings), Work/Projects (portfolio items), Testimonials (optional but supported), and Contact (email + social links).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/PortfolioNav.tsx",
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-projects-work-section-that-displays-a-list-of-portfolio-items-with-title-short-description-role-stack-freeform-text-and-outbound-links-e-g-live-demo-and-or-repository",
+      "featureTitle": "Implement a Projects/Work section that displays a list of portfolio items with: title, short description, role/stack (freeform text), and outbound links (e.g., live demo and/or repository).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProjectCard.tsx",
+        "frontend/src/components/sections/WorkSection.tsx",
+        "frontend/src/data/projects.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-contact-section-suitable-for-consulting-leads-that-includes-a-prominent-email-link-mailto-optional-calendaring-link-placeholder-and-social-links-placeholders-e-g-linkedin-x-twitter-github",
+      "featureTitle": "Add a Contact section suitable for consulting leads that includes: a prominent email link (mailto:), optional calendaring link placeholder, and social links placeholders (e.g., LinkedIn, X/Twitter, GitHub).",
+      "files": [
+        "frontend/src/components/SafeExternalLink.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/config/contact.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-establish-a-coherent-visual-theme-colors-typography-spacing-component-style-appropriate-for-a-consulting-portfolio-and-apply-it-consistently-across-all-sections-avoid-blue-purple-as-the-primary-palette",
+      "featureTitle": "Establish a coherent visual theme (colors, typography, spacing, component style) appropriate for a consulting portfolio and apply it consistently across all sections. Avoid blue & purple as the primary palette.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-seo-and-shareability-metadata-for-the-portfolio-page-title-description-and-social-preview-defaults-open-graph-twitter-card-using-placeholder-values-that-the-user-can-edit",
+      "featureTitle": "Add basic SEO and shareability metadata for the portfolio: page title, description, and social preview defaults (Open Graph/Twitter card) using placeholder values that the user can edit.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-the-required-static-images-in-the-app-and-render-them-from-frontend-static-assets-do-not-serve-images-through-the-backend",
+      "featureTitle": "Generate and include the required static images in the app and render them from frontend static assets (do not serve images through the backend).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
