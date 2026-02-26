@@ -1,0 +1,41 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace 'AR' placeholder logo with uploaded Vayutaksha Consultancy logo image",
+  "requirements": [
+    {
+      "id": "REQ-37",
+      "summary": "Replace all 'AR' text placeholder logos throughout the site with the uploaded Vayutaksha Consultancy logo image served as a static frontend asset",
+      "acceptanceCriteria": [
+        "The uploaded logo image is saved as frontend/public/assets/generated/vayutaksha-logo.png and served as a static asset.",
+        "The navigation bar no longer shows 'AR' initials or any text-based placeholder; instead it displays the logo image.",
+        "The hero section logo mark is replaced with the uploaded image where applicable.",
+        "The footer (if it contains the 'AR' mark) is updated to use the image.",
+        "All logo image elements have alt='Vayutaksha Consultancy'.",
+        "The logo renders at an appropriate size in each location without distortion."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/vayutaksha-logo.png",
+          "operation": "create",
+          "description": "Save the uploaded Vayutaksha Consultancy logo image as a static frontend asset at this path to be served directly by the frontend without backend routing"
+        },
+        {
+          "path": "frontend/src/components/PortfolioNav.tsx",
+          "operation": "modify",
+          "description": "Replace the 'AR' text/initials placeholder logo in the navigation bar with an <img> tag referencing /assets/generated/vayutaksha-logo.png. Set alt='Vayutaksha Consultancy' and size the image to approximately 40-48px height to fit naturally in the navigation context while maintaining aspect ratio"
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Replace any 'AR' logo mark or text placeholder in the hero section with an <img> tag referencing /assets/generated/vayutaksha-logo.png. Set alt='Vayutaksha Consultancy' and size the image appropriately for the hero context (larger than nav, specific dimensions to be determined based on current layout)"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace any 'AR' mark or text placeholder in the footer section with an <img> tag referencing /assets/generated/vayutaksha-logo.png. Set alt='Vayutaksha Consultancy' and size the image to fit naturally in the footer context"
+        }
+      ]
+    }
+  ]
+}

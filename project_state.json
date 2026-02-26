@@ -1,0 +1,424 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 13,
+  "summary": "Personal portfolio/consulting website for Vayutaksha Consultancy — an aerospace structural design and FEA consultancy. The site should reflect humbleness, trust, and ancient consciousness in its visual tone. Content is sourced from the provided resume; the person's name, IIT/ISRO/LAT company names must be anonymized in user-facing content except 'Vayutaksha' branding. Contact: vayutaksha@gmail.com, 7670891059. Web-sourced or AI-generated project images to be embedded as static frontend assets.",
+  "architectural_notes": [
+    "Content anonymization requirement: do not display the person's name or any company/client names from the resume; only 'Vayutaksha Consultancy' may be shown if needed.",
+    "Visual theme must convey humbleness, trust, and ancient consciousness — use earthy/warm neutral tones, classical or serif typography, and subtle traditional motifs.",
+    "Contact details to use: email = vayutaksha@gmail.com, phone = 7670891059; company brand name = Vayutaksha Consultancy."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-personal-portfolio-website-with-clear-navigation-and-the-following-sections-hero-intro-name-short-positioning-statement-about-services-consulting-offerings-work-projects-portfolio-items-testimonials-optional-but-supported-and-contact-email-social-links",
+      "title": "Create a responsive personal portfolio website with clear navigation and the following sections: Hero/Intro (name, short positioning statement), About, Services (consulting offerings), Work/Projects (portfolio items), Testimonials (optional but supported), and Contact (email + social links).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-projects-work-section-that-displays-a-list-of-portfolio-items-with-title-short-description-role-stack-freeform-text-and-outbound-links-e-g-live-demo-and-or-repository",
+      "title": "Implement a Projects/Work section that displays a list of portfolio items with: title, short description, role/stack (freeform text), and outbound links (e.g., live demo and/or repository).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-suitable-for-consulting-leads-that-includes-a-prominent-email-link-mailto-optional-calendaring-link-placeholder-and-social-links-placeholders-e-g-linkedin-x-twitter-github",
+      "title": "Add a Contact section suitable for consulting leads that includes: a prominent email link (mailto:), optional calendaring link placeholder, and social links placeholders (e.g., LinkedIn, X/Twitter, GitHub).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-establish-a-coherent-visual-theme-colors-typography-spacing-component-style-appropriate-for-a-consulting-portfolio-and-apply-it-consistently-across-all-sections-avoid-blue-purple-as-the-primary-palette",
+      "title": "Establish a coherent visual theme (colors, typography, spacing, component style) appropriate for a consulting portfolio and apply it consistently across all sections. Avoid blue & purple as the primary palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-shareability-metadata-for-the-portfolio-page-title-description-and-social-preview-defaults-open-graph-twitter-card-using-placeholder-values-that-the-user-can-edit",
+      "title": "Add basic SEO and shareability metadata for the portfolio: page title, description, and social preview defaults (Open Graph/Twitter card) using placeholder values that the user can edit.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-the-required-static-images-in-the-app-and-render-them-from-frontend-static-assets-do-not-serve-images-through-the-backend",
+      "title": "Generate and include the required static images in the app and render them from frontend static assets (do not serve images through the backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-resume-section-to-the-portfolio-site-and-include-it-in-the-main-page-flow-and-navigation-new-section-anchor-id-resume-using-english-user-facing-text",
+      "title": "Add a new Resume section to the portfolio site and include it in the main page flow and navigation (new section anchor id: \"resume\"), using English user-facing text.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-website-does-not-display-the-person-s-name-and-does-not-display-any-company-client-names-anywhere-in-user-facing-content-except-that-the-company-name-vayutaksha-consultancy-is-allowed-to-appear",
+      "title": "Ensure the website does not display the person’s name and does not display any company/client names anywhere in user-facing content, except that the company name \"Vayutaksha Consultancy\" is allowed to appear.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-projects-work-content-to-include-project-entries-derived-from-the-provided-resume-and-ensure-all-project-titles-descriptions-are-anonymized-no-client-company-names-while-remaining-specific-about-problem-approach-and-outcome",
+      "title": "Update the Projects/Work content to include project entries derived from the provided resume, and ensure all project titles/descriptions are anonymized (no client/company names) while remaining specific about problem, approach, and outcome.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-projects-work-section-with-fea-simulation-based-visuals-ai-generated-static-illustrations-associated-with-projects-and-display-those-visuals-in-each-project-card-in-a-responsive-layout",
+      "title": "Enhance the Projects/Work section with FEA simulation-based visuals (AI-generated static illustrations) associated with projects, and display those visuals in each project card in a responsive layout.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-across-the-entire-site-conveying-humbleness-trust-and-ancient-consciousness-use-earthy-warm-tones-deep-ochre-terracotta-warm-ivory-charcoal-brown-as-the-primary-palette-no-blue-or-purple-use-classical-serif-typography-for-headings-and-clean-sans-serif-for-body-text-incorporate-subtle-traditional-geometric-motifs-e-g-thin-mandala-inspired-dividers-textured-section-backgrounds-sparingly-to-reinforce-the-aesthetic-without-overwhelming-content",
+      "title": "Apply a cohesive visual theme across the entire site conveying humbleness, trust, and ancient consciousness. Use earthy, warm tones (deep ochre, terracotta, warm ivory, charcoal brown) as the primary palette — no blue or purple. Use classical serif typography for headings and clean sans-serif for body text. Incorporate subtle traditional/geometric motifs (e.g., thin mandala-inspired dividers, textured section backgrounds) sparingly to reinforce the aesthetic without overwhelming content.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-hero-section-with-vayutaksha-consultancy-branding-the-headline-should-reflect-the-consultancy-s-positioning-e-g-precision-engineering-trusted-structures-do-not-display-the-individual-s-personal-name-anywhere-use-the-hero-background-image-from-static-assets",
+      "title": "Populate the Hero section with Vayutaksha Consultancy branding. The headline should reflect the consultancy's positioning (e.g., 'Precision Engineering. Trusted Structures.'). Do not display the individual's personal name anywhere. Use the hero background image from static assets.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-about-section-with-content-derived-from-the-resume-profile-summary-describe-expertise-in-aerospace-structural-design-fea-facility-infrastructure-and-systems-integration-highlight-key-differentiators-fea-automation-using-matlab-and-python-multidisciplinary-collaboration-high-reliability-solutions-do-not-mention-the-individual-s-name-or-any-company-client-names-no-isro-no-lat-aerospace-no-iit-delhi",
+      "title": "Populate the About section with content derived from the resume profile summary. Describe expertise in aerospace structural design, FEA, facility infrastructure, and systems integration. Highlight key differentiators: FEA automation using MATLAB and Python, multidisciplinary collaboration, high-reliability solutions. Do not mention the individual's name or any company/client names (no ISRO, no LAT Aerospace, no IIT Delhi).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-services-section-with-consulting-offerings-derived-from-the-resume-include-1-structural-analysis-fea-linear-non-linear-ansys-abaqus-hypermesh-2-aerospace-structural-design-airframes-spacecraft-modules-launch-loads-3-fea-automation-post-processing-matlab-python-scripting-joint-margin-calculations-4-facility-lab-infrastructure-setup-lab-workflow-design-equipment-procurement-composite-manufacturing-processes-5-structural-testing-qualification-test-plan-development-strain-gauge-lvdt-instrumentation-multi-agency-coordination-each-service-should-have-an-icon-short-description-and-2-4-typical-engagement-bullets",
+      "title": "Populate the Services section with consulting offerings derived from the resume. Include: (1) Structural Analysis & FEA (linear/non-linear, ANSYS, ABAQUS, Hypermesh), (2) Aerospace Structural Design (airframes, spacecraft modules, launch loads), (3) FEA Automation & Post-Processing (MATLAB/Python scripting, joint margin calculations), (4) Facility & Lab Infrastructure Setup (lab workflow design, equipment procurement, composite manufacturing processes), (5) Structural Testing & Qualification (test plan development, strain gauge/LVDT instrumentation, multi-agency coordination). Each service should have an icon, short description, and 2–4 typical engagement bullets.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-projects-work-section-with-anonymized-project-entries-derived-from-the-resume-include-the-following-entries-1-crew-module-structural-design-for-human-spaceflight-parachute-deceleration-water-impact-transportation-loads-nonlinear-fea-ansys-mechanical-2-skin-stringer-spacecraft-structure-optimization-stringer-placement-optimization-lift-off-separation-loads-abaqus-analysis-3-stol-aircraft-structural-design-lab-infrastructure-flight-ground-load-analysis-composite-manufacturing-setup-vendor-management-4-satellite-ground-support-structure-design-handling-integration-transport-structures-load-capacity-and-alignment-5-fea-automation-joint-margin-calculation-tooling-matlab-python-subroutines-bolted-welded-joint-margins-simulation-data-extraction-each-entry-must-include-title-anonymized-description-role-stack-text-and-associated-static-image-from-frontend-public-assets-generated",
+      "title": "Populate the Projects/Work section with anonymized project entries derived from the resume. Include the following entries: (1) 'Crew Module Structural Design for Human Spaceflight' — parachute deceleration, water impact, transportation loads, nonlinear FEA, ANSYS Mechanical; (2) 'Skin-Stringer Spacecraft Structure Optimization' — stringer placement optimization, lift-off/separation loads, ABAQUS analysis; (3) 'STOL Aircraft Structural Design & Lab Infrastructure' — flight/ground load analysis, composite manufacturing setup, vendor management; (4) 'Satellite Ground Support Structure Design' — handling/integration/transport structures, load capacity and alignment; (5) 'FEA Automation & Joint Margin Calculation Tooling' — MATLAB/Python subroutines, bolted/welded joint margins, simulation data extraction. Each entry must include title, anonymized description, role/stack text, and associated static image from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-resume-section-anchor-id-resume-with-structured-content-from-the-provided-resume-include-1-professional-summary-paragraph-2-education-b-tech-mechanical-engineering-iit-delhi-gpa-8-4-2017-2021-anonymize-institution-name-to-premier-engineering-institution-india-if-needed-for-consistency-but-iit-delhi-may-be-shown-as-it-is-a-credential-not-a-client-3-skills-grouped-by-category-fea-tools-cad-tools-programming-general-4-experience-timeline-two-roles-described-without-naming-employers-role-1-senior-structural-engineer-aerospace-oem-april-2025-november-2025-role-2-structural-design-analysis-engineer-national-space-program-september-2021-march-2025-each-role-lists-key-responsibilities-drawn-from-the-resume-bullet-points",
+      "title": "Populate the Resume section (anchor id: 'resume') with structured content from the provided resume. Include: (1) Professional Summary paragraph, (2) Education — B.Tech Mechanical Engineering, IIT Delhi, GPA 8.4, 2017–2021 (anonymize institution name to 'Premier Engineering Institution, India' if needed for consistency, but IIT Delhi may be shown as it is a credential, not a client); (3) Skills grouped by category (FEA Tools, CAD Tools, Programming, General); (4) Experience timeline — two roles described without naming employers: Role 1: 'Senior Structural Engineer — Aerospace OEM' (April 2025–November 2025), Role 2: 'Structural Design & Analysis Engineer — National Space Program' (September 2021–March 2025). Each role lists key responsibilities drawn from the resume bullet points.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-section-to-display-email-vayutaksha-gmail-com-as-a-mailto-link-phone-number-7670891059-as-a-tel-link-and-placeholder-social-links-for-linkedin-x-twitter-and-github-the-section-heading-and-copy-should-use-warm-trust-conveying-language-consistent-with-the-ancient-consciousness-theme-e-g-begin-a-conversation",
+      "title": "Update the Contact section to display: email vayutaksha@gmail.com as a mailto: link, phone number 7670891059 as a tel: link, and placeholder social links for LinkedIn, X/Twitter, and GitHub. The section heading and copy should use warm, trust-conveying language consistent with the ancient-consciousness theme (e.g., 'Begin a Conversation').",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-seo-metadata-in-frontend-index-html-set-page-title-to-vayutaksha-consultancy-aerospace-structural-design-fea-set-meta-description-to-expert-consulting-in-aerospace-structural-design-finite-element-analysis-and-facility-infrastructure-precision-engineering-for-high-reliability-aerospace-solutions-and-update-open-graph-twitter-card-tags-accordingly",
+      "title": "Update the SEO metadata in frontend/index.html: set page title to 'Vayutaksha Consultancy — Aerospace Structural Design & FEA', set meta description to 'Expert consulting in aerospace structural design, finite element analysis, and facility infrastructure. Precision engineering for high-reliability aerospace solutions.', and update Open Graph / Twitter Card tags accordingly.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-core-competencies-block-or-section-from-the-home-page-entirely-this-includes-the-heading-core-competencies-and-all-content-beneath-it-that-is-scoped-to-that-block-on-the-home-hero-about-area",
+      "title": "Remove the 'Core Competencies' block or section from the home page entirely. This includes the heading 'Core Competencies' and all content beneath it that is scoped to that block on the home/hero/about area.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-sentence-proficient-in-fea-automation-using-matlab-and-python-systems-integration-vendor-collaboration-and-process-optimization-to-deliver-precision-engineering-outcomes-from-wherever-it-appears-in-the-site-about-section-resume-section-or-any-other-component",
+      "title": "Remove the sentence 'Proficient in FEA automation using MATLAB and Python, systems integration, vendor collaboration, and process optimization to deliver precision engineering outcomes.' from wherever it appears in the site (About section, Resume section, or any other component).",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-resumesection-tsx-remove-the-technical-skills-grouped-skills-section-entirely-including-the-section-heading-and-all-skill-category-rows-chips",
+      "title": "In ResumeSection.tsx, remove the Technical Skills (grouped skills) section entirely — including the section heading and all skill category rows/chips.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-resumesection-tsx-remove-the-professional-experience-section-both-role-entries-the-education-section-and-the-scholastic-achievements-section-entirely-including-their-headings-and-all-content-beneath-them",
+      "title": "In ResumeSection.tsx, remove the Professional Experience section (both role entries), the Education section, and the Scholastic Achievements section entirely — including their headings and all content beneath them.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-servicessection-tsx-remove-the-fea-automation-post-processing-service-card-entirely-icon-description-and-engagement-bullets",
+      "title": "In ServicesSection.tsx, remove the 'FEA Automation & Post-Processing' service card entirely — icon, description, and engagement bullets.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-servicessection-tsx-update-the-facility-lab-infrastructure-setup-service-card-replace-any-references-to-composite-manufacturing-processes-with-general-aerospace-manufacturing-facility-setup-language-update-the-description-and-engagement-bullets-accordingly-to-reflect-general-aerospace-manufacturing-facility-setup-rather-than-composite-specific-processes",
+      "title": "In ServicesSection.tsx, update the 'Facility & Lab Infrastructure Setup' service card: replace any references to composite manufacturing processes with general aerospace manufacturing facility setup language. Update the description and engagement bullets accordingly to reflect general aerospace manufacturing facility setup rather than composite-specific processes.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-servicessection-tsx-remove-the-structural-testing-qualification-service-card-entirely-icon-description-and-engagement-bullets",
+      "title": "In ServicesSection.tsx, remove the 'Structural Testing & Qualification' service card entirely — icon, description, and engagement bullets.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-projectcard-tsx-and-worksection-tsx-remove-the-role-technologies-column-field-from-all-project-cards-the-card-layout-should-only-show-the-project-image-title-and-description",
+      "title": "In ProjectCard.tsx and WorkSection.tsx, remove the 'Role & Technologies' column/field from all project cards. The card layout should only show the project image, title, and description.",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-data-projects-ts-remove-any-cmm-related-content-e-g-cmm-inspection-coordinate-measuring-machine-from-the-satellite-ground-support-structure-design-project-entry-s-description-and-any-other-fields",
+      "title": "In frontend/src/data/projects.ts, remove any CMM-related content (e.g., 'CMM inspection', 'coordinate measuring machine') from the 'Satellite Ground Support Structure Design' project entry's description and any other fields.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-data-projects-ts-and-worksection-tsx-remove-the-fea-automation-joint-margin-calculation-tooling-project-entry-entirely-so-it-no-longer-appears-in-the-featured-projects-section",
+      "title": "In frontend/src/data/projects.ts and WorkSection.tsx, remove the 'FEA Automation & Joint Margin Calculation Tooling' project entry entirely so it no longer appears in the Featured Projects section.",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-contactsection-tsx-and-frontend-src-config-contact-ts-remove-the-linkedin-x-twitter-and-github-social-link-entries-the-contact-section-should-only-display-the-email-mailto-link-and-the-phone-tel-link",
+      "title": "In ContactSection.tsx and frontend/src/config/contact.ts, remove the LinkedIn, X/Twitter, and GitHub social link entries. The Contact section should only display the email mailto: link and the phone tel: link.",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-app-tsx-or-wherever-the-footer-is-rendered-remove-the-built-with-love-using-caffeine-ai-attribution-text-entirely-if-the-footer-becomes-empty-after-removal-remove-the-footer-element-as-well-or-replace-it-with-only-the-vayutaksha-branding-copyright-line-if-one-exists",
+      "title": "In App.tsx (or wherever the footer is rendered), remove the 'Built with Love using caffeine.ai' attribution text entirely. If the footer becomes empty after removal, remove the footer element as well or replace it with only the Vayutaksha branding/copyright line if one exists.",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-uploaded-vayutaksha-consultancy-logo-image-as-a-static-frontend-asset-at-frontend-public-assets-generated-vayutaksha-logo-png-and-replace-every-occurrence-of-the-ar-text-initials-placeholder-logo-in-the-site-navigation-bar-in-portfolionav-tsx-hero-section-in-herosection-tsx-footer-in-app-tsx-and-any-other-location-rendering-the-ar-mark-with-an-img-tag-referencing-this-static-asset-set-appropriate-alt-text-vayutaksha-consultancy-and-size-the-image-to-fit-naturally-in-each-context-e-g-40-48px-height-in-the-nav-larger-in-the-hero",
+      "title": "Save the uploaded Vayutaksha Consultancy logo image as a static frontend asset at frontend/public/assets/generated/vayutaksha-logo.png and replace every occurrence of the 'AR' text/initials placeholder logo in the site (navigation bar in PortfolioNav.tsx, hero section in HeroSection.tsx, footer in App.tsx, and any other location rendering the 'AR' mark) with an <img> tag referencing this static asset. Set appropriate alt text ('Vayutaksha Consultancy') and size the image to fit naturally in each context (e.g., ~40–48px height in the nav, larger in the hero).",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a personal portfolio website for sharing work with people for consulting purposes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a Resume section generated from the provided resume while anonymizing the person name and excluding company/client names (allow showing 'Vayutaksha Consultancy' only).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Populate Projects section from the resume and enhance project entries with AI-generated FEA simulation-based visuals/illustrations where appropriate.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Apply a visual theme conveying humbleness, trust, and ancient consciousness (e.g., earthy tones, classical typography, subtle traditional motifs) across the entire site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Include real contact details in the Contact section: email vayutaksha@gmail.com and phone 7670891059.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Homepage edits: remove 'rocket launch vibrations to parachute deceleration and water impact' bullet; rename 'aircraft primary structure' to 'aircraft structures', 'satellite ground support' to 'ground support', 'composite manufacturing infrastructure' to 'design for manufacturing and assembly'; remove 'Structural testing, qualification, and CMM inspection' and 'Composite manufacturing lab setup and vendor management' bullets; remove 'Core Competencies' section/block.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "In the Hero section (or wherever the homepage bullet list of capabilities/services is rendered), remove the bullet point that reads 'rocket launch vibrations to parachute deceleration and water impact' (or any equivalent phrasing referencing that range of load cases as a single bullet).",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "On the home page, rename the capability/service bullet 'aircraft primary structure' to 'aircraft structures'.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "On the home page, rename the capability/service bullet 'satellite ground support' to 'ground support'.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "On the home page, rename the capability/service bullet 'composite manufacturing infrastructure' to 'design for manufacturing and assembly'.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "On the home page, remove the bullet point 'Structural testing, qualification, and CMM inspection' (or equivalent phrasing) from wherever it appears in the home page capability/services list.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "On the home page, remove the bullet point 'Composite manufacturing lab setup and vendor management' (or equivalent phrasing) from wherever it appears in the home page capability/services list.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Remove the sentence 'Proficient in FEA automation using MATLAB and Python, systems integration, vendor collaboration, and process optimization to deliver precision engineering outcomes.' from wherever it appears on the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Remove the Technical Skills section from the Resume/about area entirely.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Remove the Professional Experience section, Education section, and Scholastic Achievements section from the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "In the Services section, remove the 'FEA Automation & Post-Processing' service card entirely.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "In the Services section, update the 'Facility & Lab Infrastructure Setup' service: change its focus from composite manufacturing to general aerospace manufacturing facility setup.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "In the Services section, remove the 'Structural Testing & Qualification' service card entirely.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "In the Featured Projects section, remove the 'Role & Technologies' column/field from all project cards.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "In the Featured Projects section, remove the CMM-related content from the 'Satellite Ground Support Structure Design' project entry.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Remove the 'FEA Automation & Joint Margin Calculation Tooling' project entry from the Featured Projects section.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "In the Contact section, remove the LinkedIn, X/Twitter, and GitHub social links.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Remove the 'Built with Love using caffeine.ai' footer text/attribution from the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Replace the current 'AR' placeholder/initials company logo with a user-provided image as the company logo. User does not currently have a registered trademark/copyright for the company logo.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Personal portfolio website for consulting outreach",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

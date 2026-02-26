@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Replace 'AR' placeholder logo with uploaded Vayutaksha Consultancy logo image",
+  "projectName": "Vayutaksha Consultancy",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-37",
+      "text": "Save the uploaded Vayutaksha Consultancy logo image as a static frontend asset at frontend/public/assets/generated/vayutaksha-logo.png and replace every occurrence of the 'AR' text/initials placeholder logo in the site (navigation bar in PortfolioNav.tsx, hero section in HeroSection.tsx, footer in App.tsx, and any other location rendering the 'AR' mark) with an <img> tag referencing this static asset. Set appropriate alt text ('Vayutaksha Consultancy') and size the image to fit naturally in each context (e.g., ~40–48px height in the nav, larger in the hero).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add this image in place of AR for company logo",
+          "I don't have copy right for my company as of now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The uploaded logo image is saved as frontend/public/assets/generated/vayutaksha-logo.png and served as a static asset.",
+        "The navigation bar no longer shows 'AR' initials or any text-based placeholder; instead it displays the logo image.",
+        "The hero section logo mark is replaced with the uploaded image where applicable.",
+        "The footer (if it contains the 'AR' mark) is updated to use the image.",
+        "All logo image elements have alt='Vayutaksha Consultancy'.",
+        "The logo renders at an appropriate size in each location without distortion."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter any files listed under frontend.immutablePaths.",
+    "Do not route the logo image through the backend — serve it exclusively as a static frontend asset.",
+    "Do not add any copyright or trademark symbol alongside the logo, as the user has stated they do not currently hold a registered trademark."
+  ],
+  "nonGoals": [
+    "Redesigning or restyling the navigation bar or hero section beyond swapping the logo mark.",
+    "Generating a new or modified version of the logo — use the uploaded image as-is.",
+    "Adding any watermark, copyright notice, or IP disclaimer to the logo."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

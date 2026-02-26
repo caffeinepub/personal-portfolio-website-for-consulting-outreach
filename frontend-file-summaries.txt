@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main app composing all portfolio sections with ornament dividers and a footer that now displays the Vayutaksha Consultancy logo image alongside the copyright notice.",
+  "frontend/src/components/PortfolioNav.tsx": "Responsive navigation bar with the Vayutaksha Consultancy logo image replacing the previous text/icon placeholder, six nav items, desktop CTA button, and mobile menu.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section displaying the Vayutaksha Consultancy logo image as the hero mark, aerospace positioning headline, decorative mandala SVG background, and dual CTAs linking to Work and Contact sections.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with Vayutaksha description, two updated highlight bullets (removed FEA automation reference), and four highlight cards with the FEA Automation card replaced by a Structural Design card.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Three aerospace consulting service cards (Structural Analysis & FEA, Aerospace Structural Design, Facility & Lab Infrastructure Setup) — FEA Automation and Structural Testing cards removed, Facility card updated to general aerospace manufacturing language.",
+  "frontend/src/components/sections/WorkSection.tsx": "Work section rendering five anonymized aerospace project cards with updated heading and description focused on structural engineering.",
+  "frontend/src/components/sections/TestimonialsSection.tsx": "Testimonials section with fully anonymized client feedback using generic titles like \"Engineering Manager\" and \"Project Director\" without revealing company names.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with email and phone contact cards only — social links section removed, layout adjusted to two-column grid.",
+  "frontend/src/components/ProjectCard.tsx": "Project card displaying image, title, and description only — Role & Technologies field removed entirely.",
+  "frontend/src/components/SafeExternalLink.tsx": "Helper component for external links that consistently applies target=\"_blank\" and rel=\"noopener noreferrer\" for security.",
+  "frontend/src/data/projects.ts": "Four anonymized aerospace project entries with roleStack field removed from interface and all entries; FEA Automation tooling project removed; CMM references removed from Satellite Ground Support project.",
+  "frontend/src/config/contact.ts": "Contact configuration with only email and phone — social links (LinkedIn, X/Twitter, GitHub) removed entirely.",
+  "frontend/src/index.css": "Global styles using Cormorant Garamond (serif headings) and Jost (body), warm earthy OKLCH color palette with terracotta primary and ochre accent, plus ornament-divider utility and animation keyframes.",
+  "frontend/tailwind.config.js": "Tailwind theme extended with Cormorant Garamond/Jost font families, warm earthy OKLCH color tokens, warm box-shadow utilities, and standard accordion animations.",
+  "frontend/index.html": "HTML entry point with updated SEO metadata — title, description, Open Graph, and Twitter Card tags all set to Vayutaksha Consultancy aerospace branding.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file reserved for React Query hooks; currently empty as portfolio is frontend-only with no backend data fetching.",
+  "frontend/src/components/sections/ResumeSection.tsx": "Simplified resume section containing only the Professional Summary paragraph — Technical Skills, Professional Experience, Education, and Scholastic Achievements sections all removed."
+}

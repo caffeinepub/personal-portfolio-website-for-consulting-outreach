@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Warm earthy palette — deep ochre, terracotta, warm ivory, charcoal brown */
+        --background: 0.97 0.008 60;
+        --foreground: 0.18 0.020 45;
+        
+        --card: 0.99 0.004 55;
+        --card-foreground: 0.18 0.020 45;
+        
+        --popover: 0.99 0.004 55;
+        --popover-foreground: 0.18 0.020 45;
+        
+        /* Primary: Deep terracotta / burnt sienna */
+        --primary: 0.50 0.160 38;
+        --primary-foreground: 0.97 0.008 60;
+        
+        /* Secondary: Warm sand / parchment */
+        --secondary: 0.91 0.030 70;
+        --secondary-foreground: 0.22 0.025 45;
+        
+        --muted: 0.93 0.012 55;
+        --muted-foreground: 0.48 0.025 45;
+        
+        /* Accent: Antique gold / ochre */
+        --accent: 0.78 0.110 75;
+        --accent-foreground: 0.18 0.020 45;
+        
+        --destructive: 0.52 0.200 25;
+        --destructive-foreground: 0.97 0.008 60;
+        
+        --border: 0.88 0.018 55;
+        --input: 0.88 0.018 55;
+        --ring: 0.50 0.160 38;
+        
+        --chart-1: 0.55 0.160 38;
+        --chart-2: 0.65 0.130 70;
+        --chart-3: 0.72 0.100 85;
+        --chart-4: 0.48 0.180 22;
+        --chart-5: 0.78 0.090 100;
+    }
+
+    .dark {
+        --background: 0.14 0.018 42;
+        --foreground: 0.94 0.008 55;
+        
+        --card: 0.19 0.022 42;
+        --card-foreground: 0.94 0.008 55;
+        
+        --popover: 0.17 0.020 42;
+        --popover-foreground: 0.94 0.008 55;
+        
+        /* Primary: Lighter terracotta for dark mode */
+        --primary: 0.68 0.140 38;
+        --primary-foreground: 0.14 0.018 42;
+        
+        --secondary: 0.26 0.028 50;
+        --secondary-foreground: 0.94 0.008 55;
+        
+        --muted: 0.24 0.022 45;
+        --muted-foreground: 0.68 0.015 45;
+        
+        --accent: 0.38 0.080 55;
+        --accent-foreground: 0.94 0.008 55;
+        
+        --destructive: 0.58 0.180 25;
+        --destructive-foreground: 0.14 0.018 42;
+        
+        --border: 0.28 0.022 42;
+        --input: 0.28 0.022 42;
+        --ring: 0.68 0.140 38;
+        
+        --chart-1: 0.62 0.160 38;
+        --chart-2: 0.68 0.130 70;
+        --chart-3: 0.74 0.100 85;
+        --chart-4: 0.56 0.180 22;
+        --chart-5: 0.80 0.090 100;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Jost', 'system-ui', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    
+    .font-display {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    
+    .font-body {
+        font-family: 'Jost', 'system-ui', sans-serif;
+    }
+}
+
+@layer utilities {
+    .animate-in {
+        animation-fill-mode: both;
+    }
+    
+    .fade-in {
+        animation-name: fadeIn;
+    }
+    
+    .slide-in-from-bottom-4 {
+        animation-name: slideInFromBottom;
+    }
+    
+    .duration-700 {
+        animation-duration: 700ms;
+    }
+    
+    .delay-100 {
+        animation-delay: 100ms;
+    }
+    
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+    
+    .delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .ornament-divider {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .ornament-divider::before,
+    .ornament-divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, transparent, oklch(0.50 0.160 38 / 0.4), transparent);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
